@@ -1,0 +1,39 @@
+{
+  "name": "node-style",
+  "version": "1.0.0",
+  "description": "Node.js Standard Style",
+  "main": "lib/index.js",
+  "bin": {
+    "node-style": "./bin/node-style.js",
+    "node-lint": "./bin/node-style.js"
+  },
+  "scripts": {
+    "lint": "node ./bin/node-style -I 'test/fixtures/**' -I 'node_modules/**' -f",
+    "test": "npm run lint && lab -v -a code"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geek/node-style.git"
+  },
+  "keywords": [
+    "standard",
+    "node",
+    "style",
+    "eslint"
+  ],
+  "author": "Wyatt Preul",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/geek/node-style/issues"
+  },
+  "homepage": "https://github.com/geek/node-style#readme",
+  "dependencies": {
+    "belly-button": "2.x.x"
+  },
+  "devDependencies": {
+    "code": "2.x.x",
+    "fs-extra": "0.26.x",
+    "lab": "10.x.x",
+    "stand-in": "3.x.x"
+  }
+}
