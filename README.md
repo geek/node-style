@@ -16,3 +16,23 @@ core style rules.
 ```sh
 node-style
 ```
+
+
+#### --fix (-f)
+
+```sh
+node-style -f
+```
+
+Will fix linting issues that it finds.  This won't fix everything, but will
+definitely help when you are styling a large codebase.
+
+
+#### --input (-i)
+
+```sh
+node-style -i lib/**.js
+```
+
+Will only run linting on the paths that match the input.  You can have multiple
+inputs if you want to lint multiple patterns.
