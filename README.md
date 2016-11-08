@@ -2,6 +2,10 @@
 
 * Inspired and borrowed from [belly-button](https://github.com/continuationlabs/belly-button)*
 
+
+[![Build Status](https://secure.travis-ci.org/geek/node-style.svg)](http://travis-ci.org/geek/node-style)
+
+
 ### Install
 
 ```sh
