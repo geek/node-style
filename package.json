@@ -28,12 +28,12 @@
   },
   "homepage": "https://github.com/geek/node-style#readme",
   "dependencies": {
-    "belly-button": "2.x.x"
+    "belly-button": "3.x.x"
   },
   "devDependencies": {
-    "code": "2.x.x",
-    "fs-extra": "0.26.x",
-    "lab": "10.x.x",
-    "stand-in": "3.x.x"
+    "code": "4.x.x",
+    "fs-extra": "1.x.x",
+    "lab": "11.x.x",
+    "stand-in": "4.x.x"
   }
 }
