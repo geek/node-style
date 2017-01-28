@@ -28,7 +28,8 @@
   },
   "homepage": "https://github.com/geek/node-style#readme",
   "dependencies": {
-    "belly-button": "3.x.x"
+    "belly-button": "3.x.x",
+    "eslint-plugin-nodejs": "0.0.x"
   },
   "devDependencies": {
     "code": "4.x.x",

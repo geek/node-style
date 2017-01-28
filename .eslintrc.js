@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+  plugins: ['eslint-plugin-nodejs'],
   env: {
     node: true,
     es6: true
@@ -57,7 +58,7 @@ module.exports = {
     // http://eslint.org/docs/rules/#variables
     'no-delete-var': 2,
     'no-undef': 2,
-    'no-unused-vars': [2, { args: 'none'}],
+    'no-unused-vars': [2, {args: 'none'}],
 
     // Node.js and CommonJS
     // http://eslint.org/docs/rules/#nodejs-and-commonjs
@@ -68,7 +69,15 @@ module.exports = {
     'no-restricted-properties': [2, {
         'object': 'assert',
         'property': 'deepEqual',
-        'message': 'Please use assert.deepStrictEqual().'
+        'message': 'Use assert.deepStrictEqual().'
+      }, {
+        'object': 'assert',
+        'property': 'equal',
+        'message': 'Use assert.strictEqual() rather than assert.equal().'
+      }, {
+        'object': 'assert',
+        'property': 'notEqual',
+        'message': 'Use assert.notStrictEqual() rather than assert.notEqual().'
       }, {
         'property': '__defineGetter__',
         'message': '__defineGetter__ is deprecated.'
@@ -80,6 +89,7 @@ module.exports = {
 
     // Stylistic Issues
     // https://github.com/eslint/eslint/tree/master/docs/rules#stylistic-issues
+    'block-spacing': 2,
     'brace-style': [2, '1tbs', { allowSingleLine: true }],
     'comma-spacing': 2,
     'comma-style': 2,
@@ -119,7 +129,15 @@ module.exports = {
     'no-this-before-super': 2,
     'prefer-const': [2, { 'ignoreReadBeforeAssign': true }],
     'rest-spread-spacing': 2,
-    'template-curly-spacing': 2
+    'template-curly-spacing': 2,
+
+    // Custom rules in tools/eslint-rules
+    'nodejs/align-multiline-assignment': 2,
+    'nodejs/assert-fail-single-argument': 2,
+    'nodejs/assert-throws-arguments': [2, { requireTwo: false }],
+    'nodejs/new-with-error': [2, 'Error', 'RangeError', 'TypeError',
+        'SyntaxError', 'ReferenceError'],
+    'nodejs/timer-arguments': 2
   },
   globals: {
     COUNTER_HTTP_CLIENT_REQUEST: false,
